@@ -23,6 +23,8 @@ class Database{
             return Database::$conn;//returns existing connection
         }
     }
+
+    //Sets data in DB
     public static function setComment($username,$comment){
         $conn= Database::getConnection();
         $sql = "INSERT INTO comments (username, comment, comment_time) VALUES (?, ?, now())";
@@ -40,6 +42,7 @@ class Database{
         }
     }
 
+    //gets data from DB
     public static function getComment(){
         $conn= Database::getConnection();
         $sql="SELECT * FROM `comments`";
@@ -49,6 +52,19 @@ class Database{
         }
         else{
             return [];
+        }
+    }
+
+    //Deletes a comment from DB using id
+    public static function deleteComment($id){
+        $conn=Database::getConnection();
+        $sql="DELETE FROM `comments` WHERE `id` = '$id'";
+        $result=$conn->query($sql);
+        if($result){
+            return true;
+        }
+        else{
+            return false;
         }
     }
 }
