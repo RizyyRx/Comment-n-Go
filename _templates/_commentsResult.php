@@ -45,6 +45,7 @@ $comments = Database::getComment();
                 echo '<strong>' . $comment['username'] . ':</strong> ' . $comment['comment'];
                 echo '</div>';
                 
+                
                 // Display timestamp near delete button
                 echo '<div class="d-flex align-items-center">';
                 echo '<small class="text-muted mr-3">' . $comment['comment_time'] . '</small>';

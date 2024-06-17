@@ -13,7 +13,7 @@ include "libs/load.php";
     <? load_template("_commentsResult"); ?>
   </main>
   <? load_template("_footer"); ?>
-  <script src="/cng/assets/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
 <?

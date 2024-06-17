@@ -1,6 +1,8 @@
 <?
 class Database{
     public static $conn=NULL;
+
+    //gets connection from Database using credentials
     public static function getConnection(){
         
         if(Database::$conn==NULL){//creates new connection
@@ -24,7 +26,7 @@ class Database{
         }
     }
 
-    //Sets data in DB
+    //Sets comment data in DB
     public static function setComment($username,$comment){
         $conn= Database::getConnection();
         $sql = "INSERT INTO comments (username, comment, comment_time) VALUES (?, ?, now())";
@@ -42,7 +44,7 @@ class Database{
         }
     }
 
-    //gets data from DB
+    //gets comment data from DB
     public static function getComment(){
         $conn= Database::getConnection();
         $sql="SELECT * FROM `comments`";

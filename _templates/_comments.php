@@ -1,3 +1,4 @@
+<!--Template for displaying Comment bar -->
 <div class="container">
     <h1 class="mt-5">Enter your name and comment</h1>
     <form action="index.php" method="post" class="mt-3">
